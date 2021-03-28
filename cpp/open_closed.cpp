@@ -16,17 +16,17 @@ public:
           device_colour_(d_colour),
           device_weight_(d_weight) {}
 
-    std::string get_device_name() const 
+    std::string get_device_name() const noexcept
     {
         return device_name_;
     }
 
-    device_colour get_device_colour() const
+    device_colour get_device_colour() const noexcept
     {
         return device_colour_;
     }
 
-    device_weight get_device_weight() const
+    device_weight get_device_weight() const noexcept
     {
         return device_weight_;
     }
@@ -102,19 +102,17 @@ public:
     }
 };
 
-
-
 int main()
 {
-    device_description  headphones {"Sennheiser", device_colour::black, device_weight::light};
-    device_description  laptop {"Lenovo T500", device_colour::blue, device_weight::medium};
-    device_description  printer {"HP G4", device_colour::silver, device_weight::heavy};
+    device_description  headphones {"Sennheiser" ,  device_colour::black ,  device_weight::light };
+    device_description  laptop     {"Lenovo T500",  device_colour::blue  ,  device_weight::medium};
+    device_description  printer    {"HP G4"      ,  device_colour::silver,  device_weight::heavy };
 
     devices all_devices {headphones, laptop, printer};
 
     device_filter fw;
     weight_speficification light_spec(device_weight::light);    
-    auto filtered_devices_by_weight = fw.filter(all_devices, light_spec);
+    const auto filtered_devices_by_weight = fw.filter(all_devices, light_spec);
 
     for (const auto & device : filtered_devices_by_weight)
     {
