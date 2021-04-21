@@ -59,6 +59,8 @@ private:
     const device_colour device_colour_;
 };
 
+
+// definition of weight specification
 class weight_speficification : public ispecification<device_description>
 {
 public:
