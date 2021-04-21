@@ -44,6 +44,7 @@ public:
     virtual bool is_satisfied(const T & item) const = 0;
 };
 
+// colour specification
 class colour_speficification : public ispecification<device_description>
 {
 public:
