@@ -1,1 +1,2 @@
-# Implementation of SOLID principles in C++, Go and Rust
+# Implementation of SOLID principles in C++, Go Rust, and Nim
+
