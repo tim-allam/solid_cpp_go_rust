@@ -1,0 +1,1 @@
+Cloned<std::iter::Filter<std::slice::Iter<'_, DeviceDescription>, {closure@src/main.rs:85:21: 85:29}>>
